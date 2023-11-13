@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "320653635055",
+    "project_id": "nreader-app-62e99",
+    "storage_bucket": "nreader-app-62e99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320653635055:android:7ab2b9438b546914891a1a",
+        "android_client_info": {
+          "package_name": "com.example.nreaderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320653635055-e9242s0flcjsng9j6gktasb2tn9mb3jp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8wxeNPgewKYyXpW-fF67r37k2ZgqcRwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320653635055-e9242s0flcjsng9j6gktasb2tn9mb3jp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

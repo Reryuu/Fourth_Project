@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    tools:context=".activities.PdfDetailActivity">
+    
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar01">
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_w"
+            android:background="@drawable/shape_edittext01"
+            android:layout_margin="10dp"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book detail"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@id/readBookBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarRl"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/pdfRl"
+                    android:layout_width="105dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/gray_lb">
+
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/pdfView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/titleTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pdfRl"
+                    android:text="Book title"
+                    android:textColor="@color/white"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTv"
+                    android:layout_toEndOf="@id/pdfRl">
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/categorylabelTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Category"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/categoryTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="N/a"
+                            android:textColor="@color/white"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/datelabelTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Date"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/dateTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/a"
+                            android:textColor="@color/white"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/sizelabelTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Size"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/sizeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/a"
+                            android:textColor="@color/white"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/viewslabelTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Views"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/viewsTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/a"
+                            android:textColor="@color/white"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/dowloadslabelTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Dowloads"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/dowloadsTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/a"
+                            android:textColor="@color/white"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/pageslabelTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:text="Pages"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/pagesTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/a"
+                            android:textColor="@color/white"/>
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Book description"
+                android:textColor="@color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_db"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/commentsLabelTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Comment"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"/>
+
+                <ImageButton
+                    android:id="@+id/addCommentBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/shape_edittext01"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_comment_r"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/commentsRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_db"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_comment"
+                    android:layout_below="@+id/addCommentBtn"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/favoriteBookBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/readBookBtn"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_button01"
+        android:text="Add favourite"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/readBookBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/dowloadBookBtn"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_button02"
+        android:text="Read"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dowloadBookBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Dowload"
+        android:background="@drawable/shape_button02"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

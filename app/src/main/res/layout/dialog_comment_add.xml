@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_comment"
+    android:padding="20dp">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_w"
+        android:background="@drawable/shape_edittext01"
+        android:padding="5dp"/>
+    
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="5dp"
+        android:text="Add comment"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/commentTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backBtn"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/commentEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/ic_comment_w"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:hint="Comment"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textColorHint="@color/gray_l"
+            android:inputType="textCapSentences|textMultiLine"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commentTil"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_button01"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

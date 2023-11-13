@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Nreader App</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? <b>Register</b></string>
+    <string name="forgot_your_password_reset_it">Forgot your password? <b>Reset it</b></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
